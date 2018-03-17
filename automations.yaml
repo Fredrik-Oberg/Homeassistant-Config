@@ -1,0 +1,33 @@
+- action:
+  - data:
+      entity_id: light.tv_light
+    service: light.turn_on
+  alias: Turn on the tv light
+  condition: []
+  id: '1519222421462'
+  trigger:
+  - event: sunset
+    offset: -00:30:00
+    platform: sun
+- action:
+  - data:
+      entity_id: light.basement
+    service: light.turn_on
+  alias: Basement lights on
+  id: '1521288885265'
+  trigger:
+  - entity_id: binary_sensor.window__door_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - data:
+      entity_id: light.basement
+    service: light.turn_off
+  alias: Basement lights off
+  id: '1521288885266'
+  trigger:
+  - entity_id: binary_sensor.window__door_sensor
+    from: 'on'
+    platform: state
+    to: 'off'

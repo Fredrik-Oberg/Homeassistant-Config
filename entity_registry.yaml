@@ -1,0 +1,9 @@
+binary_sensor.window__door_sensor:
+  platform: deconz
+  unique_id: 00:15:8d:00:01:b9:59:7f-01-0006
+light.basement:
+  platform: deconz
+  unique_id: 00:0b:57:ff:fe:92:04:76-01
+light.tv_light:
+  platform: deconz
+  unique_id: 00:17:88:01:03:82:fb:82-0b

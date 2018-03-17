@@ -1,0 +1,13 @@
+'1519079831206':
+  alias: goodnight
+  sequence:
+  - alias: ''
+    data:
+      entity_id: group.all_lights
+    service: light.turn_off
+  - data:
+      entity_id: media_player.tv
+    service: media_player.turn_off
+  - data:
+      entity_id: media_player.all
+    service: media_player.turn_off
